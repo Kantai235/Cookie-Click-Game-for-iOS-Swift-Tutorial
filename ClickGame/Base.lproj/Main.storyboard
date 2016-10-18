@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coin = 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="5SR-lP-vQg">
+                                <color key="backgroundColor" red="0.94453233479999998" green="0.83718913790000005" blue="0.72012251620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <color key="textColor" red="0.31323164701461792" green="0.098259188234806061" blue="0.10886181145906448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y9-qb-oDy">
+                                <color key="backgroundColor" red="0.88677060604095459" green="0.74368840456008911" blue="0.65938156843185425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <state key="normal" title="點我+1">
+                                    <color key="titleColor" red="0.313231647" green="0.098259188230000002" blue="0.1088618115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="_addCoinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBh-lB-gte"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0J6-I4-L3a">
+                                <color key="backgroundColor" red="0.88677060600000002" green="0.74368840459999996" blue="0.65938156839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                                <state key="normal">
+                                    <string key="title">升級自動
+消耗 2</string>
+                                    <color key="titleColor" red="0.313231647" green="0.098259188230000002" blue="0.1088618115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AutoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAZ-xI-Wtd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ytz-vY-7Ho">
+                                <color key="backgroundColor" red="0.88677060600000002" green="0.74368840459999996" blue="0.65938156839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal">
+                                    <string key="title">升級點擊
+消耗 2</string>
+                                    <color key="titleColor" red="0.313231647" green="0.098259188230000002" blue="0.1088618115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MaO-Qg-5o1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75173944234848022" green="0.57140141725540161" blue="0.50252336263656616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5SR-lP-vQg" secondAttribute="trailing" constant="-20" id="0ij-au-1St"/>
+                            <constraint firstItem="5SR-lP-vQg" firstAttribute="top" secondItem="0J6-I4-L3a" secondAttribute="bottom" constant="20" id="0iw-PX-A0Z"/>
+                            <constraint firstItem="0J6-I4-L3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="2we-wm-g2K"/>
+                            <constraint firstItem="ytz-vY-7Ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="Db4-5k-vNL"/>
+                            <constraint firstItem="5SR-lP-vQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HeT-rR-05B"/>
+                            <constraint firstItem="7y9-qb-oDy" firstAttribute="top" secondItem="5SR-lP-vQg" secondAttribute="bottom" constant="20" id="Hy3-KK-WhM"/>
+                            <constraint firstItem="0J6-I4-L3a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IZ9-wG-OiT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ytz-vY-7Ho" secondAttribute="trailing" id="Ped-pq-uMs"/>
+                            <constraint firstItem="0J6-I4-L3a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="REy-nL-5fC"/>
+                            <constraint firstItem="ytz-vY-7Ho" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SPF-ba-uN2"/>
+                            <constraint firstItem="5SR-lP-vQg" firstAttribute="top" secondItem="ytz-vY-7Ho" secondAttribute="bottom" constant="20" id="Ukl-Ik-uOw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7y9-qb-oDy" secondAttribute="trailing" id="g3S-QN-Ujo"/>
+                            <constraint firstItem="7y9-qb-oDy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="heP-cG-hpV"/>
+                            <constraint firstItem="5SR-lP-vQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="2/3" id="ugt-pG-ExF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7y9-qb-oDy" secondAttribute="bottom" constant="20" id="wxp-A9-O8f"/>
+                            <constraint firstItem="5SR-lP-vQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yeG-nw-I2c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ClickButton" destination="7y9-qb-oDy" id="oGA-ez-TmM"/>
+                        <outlet property="Main_AutoUpdateButton" destination="0J6-I4-L3a" id="CF7-lH-wiJ"/>
+                        <outlet property="Main_ClickUpdateButton" destination="ytz-vY-7Ho" id="iry-yx-YS8"/>
+                        <outlet property="Main_Label" destination="5SR-lP-vQg" id="Al1-dY-ai8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
