@@ -11,9 +11,9 @@
 		A73F25D21DB66B8B00D87B3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F25D11DB66B8B00D87B3B /* ViewController.swift */; };
 		A73F25D51DB66B8B00D87B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73F25D31DB66B8B00D87B3B /* Main.storyboard */; };
 		A73F25D71DB66B8B00D87B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73F25D61DB66B8B00D87B3B /* Assets.xcassets */; };
-		A73F25DA1DB66B8B00D87B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73F25D81DB66B8B00D87B3B /* LaunchScreen.storyboard */; };
 		A73F25E51DB66B8C00D87B3B /* ClickGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F25E41DB66B8C00D87B3B /* ClickGameTests.swift */; };
 		A73F25F01DB66B8C00D87B3B /* ClickGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F25EF1DB66B8C00D87B3B /* ClickGameUITests.swift */; };
+		A7544E141DB8DCF100476A2E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7544E131DB8DCF100476A2E /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		A73F25D11DB66B8B00D87B3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A73F25D41DB66B8B00D87B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A73F25D61DB66B8B00D87B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A73F25D91DB66B8B00D87B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73F25DB1DB66B8B00D87B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A73F25E01DB66B8C00D87B3B /* ClickGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73F25E41DB66B8C00D87B3B /* ClickGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickGameTests.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		A73F25EB1DB66B8C00D87B3B /* ClickGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73F25EF1DB66B8C00D87B3B /* ClickGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickGameUITests.swift; sourceTree = "<group>"; };
 		A73F25F11DB66B8C00D87B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7544E131DB8DCF100476A2E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 				A73F25CF1DB66B8B00D87B3B /* AppDelegate.swift */,
 				A73F25D11DB66B8B00D87B3B /* ViewController.swift */,
 				A73F25D31DB66B8B00D87B3B /* Main.storyboard */,
+				A7544E131DB8DCF100476A2E /* Launch Screen.storyboard */,
 				A73F25D61DB66B8B00D87B3B /* Assets.xcassets */,
-				A73F25D81DB66B8B00D87B3B /* LaunchScreen.storyboard */,
 				A73F25DB1DB66B8B00D87B3B /* Info.plist */,
 			);
 			path = ClickGame;
@@ -235,7 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73F25DA1DB66B8B00D87B3B /* LaunchScreen.storyboard in Resources */,
+				A7544E141DB8DCF100476A2E /* Launch Screen.storyboard in Resources */,
 				A73F25D71DB66B8B00D87B3B /* Assets.xcassets in Resources */,
 				A73F25D51DB66B8B00D87B3B /* Main.storyboard in Resources */,
 			);
@@ -305,14 +305,6 @@
 				A73F25D41DB66B8B00D87B3B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A73F25D81DB66B8B00D87B3B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A73F25D91DB66B8B00D87B3B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -514,6 +506,7 @@
 				A73F25F61DB66B8C00D87B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73F25F71DB66B8C00D87B3B /* Build configuration list for PBXNativeTarget "ClickGameTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +515,7 @@
 				A73F25F91DB66B8C00D87B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73F25FA1DB66B8C00D87B3B /* Build configuration list for PBXNativeTarget "ClickGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +524,7 @@
 				A73F25FC1DB66B8C00D87B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
